@@ -2739,10 +2739,18 @@ var animate = function () {
 	// 	fft.getEnergy("highMid"),
 	// 	fft.getEnergy("treble"));
 
-  ball1.rotation.y += 0.01;
-  ball2.rotation.y += 0.01;
-  ball3.rotation.y += 0.01;
-  ball4.rotation.y += 0.01;
+	var time = performance.now() * 0.001;
+
+	ball1.position.y = Math.sin( time ) * 2 + 2;
+	ball2.position.y = Math.sin( time ) * 2 + 2;
+	ball3.position.y = Math.sin( time ) * 2 + 2;
+	ball4.position.y = Math.sin( time ) * 2 + 2;
+
+	
+	ball1.rotation.y += 0.01;
+	ball2.rotation.y += 0.01;
+	ball3.rotation.y += 0.01;
+	ball4.rotation.y += 0.01;
 
 	videoMaterial.opacity = (seq.progress);
 	// videoMaterial.opacity = (mic.getLevel()*10);
