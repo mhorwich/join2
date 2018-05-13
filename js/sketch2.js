@@ -78,18 +78,18 @@ var altoSphere = new Tone.Panner3D(-5, 0, 0).connect(convolver);
 var tenorSphere = new Tone.Panner3D(0, 0, 5).connect(convolver);
 var bassSphere = new Tone.Panner3D(0, 0, -5).connect(convolver);
 
-var treble = new Tone.Player("2minStems4.mp3").connect(convolver).connect(trebleSphere);
-var alto = new Tone.Player("2minStems3.mp3").connect(convolver).connect(altoSphere);
-var tenor = new Tone.Player("2minStems2.mp3").connect(convolver).connect(tenorSphere);
-var bass = new Tone.Player("2minStems1.mp3").connect(convolver).connect(bassSphere);
-var all = new Tone.Player("2minStems.mp3").connect(convolver);
+// var treble = new Tone.Player("2minStems4.mp3").connect(convolver).connect(trebleSphere);
+// var alto = new Tone.Player("2minStems3.mp3").connect(convolver).connect(altoSphere);
+// var tenor = new Tone.Player("2minStems2.mp3").connect(convolver).connect(tenorSphere);
+// var bass = new Tone.Player("2minStems1.mp3").connect(convolver).connect(bassSphere);
+// var all = new Tone.Player("2minStems.mp3").connect(convolver);
 var twelveMin = new Tone.Player("12minPrint.mp3").connect(convolver);
 
-treble.loop = true;
-alto.loop = true;
-tenor.loop = true;
-bass.loop = true;
-all.loop = true;
+// treble.loop = true;
+// alto.loop = true;
+// tenor.loop = true;
+// bass.loop = true;
+// all.loop = true;
 twelveMin.loop = true;
 
 
