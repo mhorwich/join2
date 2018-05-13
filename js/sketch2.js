@@ -2644,7 +2644,7 @@ texture.minFilter = THREE.LinearFilter;
 texture.format = THREE.RGBFormat;
 var vidMat   = new THREE.MeshBasicMaterial( { map : texture } );
 vidMat.transparent = true;
-vidMat.opacity = 0.25;
+// vidMat.opacity = 0.25;
 
 mesh = new THREE.Mesh( skyGlobe, vidMat );
 scene.add( mesh );
@@ -2657,7 +2657,7 @@ videoTexture.minFilter = THREE.LinearFilter;
 videoTexture.format = THREE.RGBFormat;
 
 var videoMaterial = new THREE.MeshBasicMaterial( { map : videoTexture } );
-videoMaterial.opacity = 0.25;
+// videoMaterial.opacity = 0.25;
 // videoMaterial.opacity = Math.random;
 videoMaterial.transparent = true;
 
@@ -2700,8 +2700,8 @@ archMaterial.transparent = true;
 archMesh = new THREE.Mesh( skyGlobe2, archMaterial )
 // mesh = new THREE.Mesh( skyGlobe, videoMaterial );
 
-// scene.add( mesh );
-scene.add( archMesh );
+scene.add( mesh );
+// scene.add( archMesh );
 
 var geometry1 = new THREE.SphereGeometry( 2, 24, 24 );
 var material1 = new THREE.MeshNormalMaterial();
@@ -2746,26 +2746,13 @@ var animate = function () {
 	ball3.position.y = Math.sin( time ) * 2 + 2;
 	ball4.position.y = Math.sin( time ) * 2 + 2;
 
-	
 	ball1.rotation.y += 0.01;
 	ball2.rotation.y += 0.01;
 	ball3.rotation.y += 0.01;
 	ball4.rotation.y += 0.01;
 
-	videoMaterial.opacity = (seq.progress);
-	// videoMaterial.opacity = (mic.getLevel()*10);
-
-	console.log(mic.getLevel());
-	// console.log("note");
-
-// 	archMaterial.opacity = (fft.getEnergy("treble"));
 	vidMat.opacity = mic.getLevel();
 
-// 	if (mic.getLevel() > 0.1) {
-// 	vidMat.opacity += mic.getLevel();
-// 	} else {
-// 	vidMat.opacity += -mic.getLevel();
-// 	}
 
 	if(vrDisplay.isPresenting){ // VR rendering
     controls.update();
