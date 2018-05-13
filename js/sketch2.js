@@ -2759,12 +2759,13 @@ var animate = function () {
 	// console.log("note");
 
 // 	archMaterial.opacity = (fft.getEnergy("treble"));
+	vidMat.opacity = mic.getLevel();
 
-	if (mic.getLevel() > 0.1) {
-	vidMat.opacity += mic.getLevel();
-	} else {
-	vidMat.opacity += -mic.getLevel();
-	}
+// 	if (mic.getLevel() > 0.1) {
+// 	vidMat.opacity += mic.getLevel();
+// 	} else {
+// 	vidMat.opacity += -mic.getLevel();
+// 	}
 
 	if(vrDisplay.isPresenting){ // VR rendering
     controls.update();
