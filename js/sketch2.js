@@ -89,7 +89,7 @@ twelveMin.autostart = true;
 
 //MIC STUFF
 mic = new p5.AudioIn();
-mic.amp(0.25);
+// mic.amp(0.25);
 mic.start();
 mic.connect();
 
