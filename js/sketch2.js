@@ -84,20 +84,7 @@ var bassSphere = new Tone.Panner3D(0, 0, -5).connect(convolver);
 // var bass = new Tone.Player("2minStems1.mp3").connect(convolver).connect(bassSphere);
 // var all = new Tone.Player("2minStems.mp3").connect(convolver);
 var twelveMin = new Tone.Player("12minPrint.mp3").connect(convolver);
-
-// treble.loop = true;
-// alto.loop = true;
-// tenor.loop = true;
-// bass.loop = true;
-// all.loop = true;
 twelveMin.loop = true;
-
-
-// treble.autostart = true;
-// alto.autostart = true;
-// tenor.autostart = true;
-// bass.autostart = true;
-// all.autostart = true;
 twelveMin.autostart = true;
 
 //MIC STUFF
@@ -2740,8 +2727,6 @@ ball4 = new THREE.Mesh( geometry4, videoMaterial );
 ball4.position.x = 10;
 scene.add( ball4 );
 
-// activatePanoControl()
-
 //animation!
 var animate = function () {
 
@@ -2765,7 +2750,7 @@ var animate = function () {
 	// console.log(mic.getLevel());
 	// console.log("note");
 
-	// archMaterial.opacity = (fft.getEnergy("treble"));
+	archMaterial.opacity = (fft.getEnergy("treble"));
 
 // 	if (mic.getLevel() > 0.3) {
 // 	vidMat.opacity += mic.getLevel();
