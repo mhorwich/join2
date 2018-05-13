@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.sound.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-particle-system-component@1.0.9/dist/aframe-particle-system-component.min.js"></script>
+<script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+
+<script src="js/Tone.js"></script>
+<script src="js/main.js"></script>
+<script src="js/midi.js"></script>
+<script src="js/vocoder.js"></script>
+<script src="js/waveshaper.js"></script>
+<script src="js/pitchdetect.js"></script>
+
+
+<!-- VR packages -->
+<script src="lib/VRControls.js"></script>
+<script src="lib/VREffect.js"></script>
+<script src="lib/WebVR.js"></script>
+<script src="lib/webvr-polyfill.js"></script>
+
+</head>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: #000000;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#info {
+				position: absolute;
+				top: 0px; width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family:Monospace;
+				font-size:13px;
+				font-weight: bold;
+				text-align:center;
+			}
+			a {
+				color: #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <script src="js/pano_mouse.js"></script> -->
+	  <script src="js/sketch2.js"></script>
+
+		<div id="vr_button"></div>
+
+		<!-- <a-scene>
+      <a-entity position="0 1.6 0" camera look-controls></a-entity>
+      <a-entity particle-system="preset: default" position="0 0 -10"></a-entity>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow dynamic-body></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#4CC3D9" shadow></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder> -->
+      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow static-body></a-plane> -->
+      <!-- <a-entity environment="preset: forest; fog: .5"></a-entity> -->
+      <!-- <a-sky color="#ECECEC"></a-sky> --> -->
+    <!-- </a-scene> --> -->
+
+</body>
+</html>
