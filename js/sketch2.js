@@ -2755,7 +2755,7 @@ var animate = function () {
 	videoMaterial.opacity = (seq.progress);
 	// videoMaterial.opacity = (mic.getLevel()*10);
 
-	// console.log(mic.getLevel());
+	console.log(mic.getLevel());
 	// console.log("note");
 
 	archMaterial.opacity = (fft.getEnergy("treble"));
