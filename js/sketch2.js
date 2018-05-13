@@ -2631,7 +2631,6 @@ var seq = new Tone.Sequence(function(time, note) {
   chain3.next();
   chain4.next();
 
-  //   myVoice.speak(verses);
 }, chain1.value, "4m");
 
 // Tone.Transport.bpm.value = 120;
@@ -2691,11 +2690,11 @@ navigator.getUserMedia({audio: false, video: { width: window.innerWidth, height:
   console.log("Failed to get a stream due to", error)
 })
 
-// var spotLight = new THREE.SpotLight( 0xff8888 );
-// spotLight.position.set( 0, 200, 0 );
-// spotLight.angle = Math.PI / 6;
-// spotLight.penumbra = 0.9;
-// scene.add( spotLight );
+var spotLight = new THREE.SpotLight( 0xff8888 );
+spotLight.position.set( 0, 200, 0 );
+spotLight.angle = Math.PI / 6;
+spotLight.penumbra = 0.9;
+scene.add( spotLight );
 
 // outer sphere
 var skyGlobe = new THREE.SphereGeometry( 500, 60, 40 );
@@ -2746,8 +2745,6 @@ scene.add( ball4 );
 //animation!
 var animate = function () {
 
-  // camera.rotation.y += 0.001;
-	// camera.rotation.y += mic.getLevel()/10;
 
 	fft.analyze();
 	// console.log(
@@ -2762,7 +2759,7 @@ var animate = function () {
   ball3.rotation.y += 0.01;
   ball4.rotation.y += 0.01;
 
-	// videoMaterial.opacity = (seq.progress);
+	videoMaterial.opacity = (seq.progress);
 	// videoMaterial.opacity = (mic.getLevel()*10);
 
 	// console.log(mic.getLevel());
@@ -2770,11 +2767,11 @@ var animate = function () {
 
 	// archMaterial.opacity = (fft.getEnergy("treble"));
 
-	if (mic.getLevel() > 0.3) {
-	vidMat.opacity += mic.getLevel();
-	} else {
-	vidMat.opacity += -mic.getLevel();
-	}
+// 	if (mic.getLevel() > 0.3) {
+// 	vidMat.opacity += mic.getLevel();
+// 	} else {
+// 	vidMat.opacity += -mic.getLevel();
+// 	}
 
 	if(vrDisplay.isPresenting){ // VR rendering
     controls.update();
@@ -2786,10 +2783,3 @@ var animate = function () {
     window.requestAnimationFrame(animate);
   }
 };
-
-// animate();
-
-function keyPressed(){
-	// seq.start();
-  //opportunity for you to change the background?
-}
