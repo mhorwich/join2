@@ -2751,6 +2751,7 @@ var animate = function () {
 	ball3.rotation.y += 0.01;
 	ball4.rotation.y += 0.01;
 
+	videoMaterial.opacity = (Math.sin( time ) + 1) / 2;
 	vidMat.opacity = mic.getLevel()*4;
 
 
