@@ -99,6 +99,10 @@ lowPass.process(mic);
 
 delay = new p5.Delay();
 delay.process(lowPass, .12, .7, 2300);
+delay2 = new p5.Delay();
+delay2.process(delay, .25, .5, 2300);
+delay3 = new p5.Delay();
+delay3.process(delay2, .5, .4, 2300);
 
 
 fft = new p5.FFT(0, 16);
