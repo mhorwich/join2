@@ -2756,8 +2756,8 @@ var animate = function () {
 	ball4.rotation.y += 0.01;
 
 	videoMaterial.opacity = (Math.sin( time ) + 1) / 2;
-// 	vidMat.opacity = mic.getLevel()*4;
-	vidMat.opacity = delay3.getLevel()*4;
+	vidMat.opacity = mic.getLevel()*4;
+// 	vidMat.opacity = delay3.getLevel()*4;
 
 
 	if(vrDisplay.isPresenting){ // VR rendering
